@@ -246,7 +246,7 @@ async def send_periodic_messages_newAuctions(channel):
                 time_left_ms = unix_timestamp - current_time
                 time_left_seconds = time_left_ms // 1000
 
-                if 0 < time_left_seconds <= 5700 and list(newAuctionIds)[index] not in notified_auctions:
+                if 0 < time_left_seconds <= 600 and list(newAuctionIds)[index] not in notified_auctions:
                     notified_auctions.add(list(newAuctionIds)[index])
                     embed = discord.Embed(title=f"⏰ [AUCTION ALERT!] {newAuctionNames[index]}", url="https://mannco.store/auctions", color=0xFF0000)
                     embed.set_thumbnail(url=f"{newAuctionImages[index]}")
