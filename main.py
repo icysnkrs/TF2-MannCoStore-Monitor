@@ -15,7 +15,8 @@ def readingProducts(file_path: str):
     except Exception as e:
         print(f"Couldn't read products .json file {e}")
         return []
-
+def printFunction():
+    print("Testing git")
 # Cleaning complete memory every 24h function
 def clean_old_products(processed_items, max_age_hours = 24):
     now = datetime.datetime.now()
